@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --primary: 0 0% 17.25%;
+        --primary-content: 0 0% 69.8%;
+
+        --secondary: 0 0% 22.75%;
+        --secondary-content: 0 0% 40.78%;
+
+        --accent: 0 100% 19.41%;
+        --accent-content: 0 0% 89.8%;
+    }
+}
