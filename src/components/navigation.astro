@@ -1,31 +1,9 @@
 ---
-import {cn} from "../utils";
-
-import { Icon } from "astro-icon/components"
-
-interface Props {
-    headerClass?: string;
-    navClass?: string;
-    links?: { href: string; text: string }[];
-}
-const { headerClass, navClass, links } = Astro.props;
-const navs = links ??  [
-    { href: '/', text: 'Home' },
-    { href: '/about', text: 'About' },
-    { href: '/services', text: 'Services' },
-    { href: '/pricing', text: 'Pricing' },
-    { href: '/contact', text: 'Contact' },
-];
-
+import Logo from "./logo.astro";
+import Header from "./vue/Header.vue";
 ---
-<header class={cn('full-bleed', headerClass)}>
-    <nav class={cn('p-5 flex flex-col items-start md:flex-row md:items-center md:justify-end', navClass)}>
-        {navs.map((nav) => {
-            return (
-                <a href={nav.href} class="px-3 py-2 rounded-md text-sm font-medium hover:underline">
-                    {nav.text}
-                </a>
-            );
-        })}
-    </nav>
-</header>
+
+<Header>
+    <Logo slot="logo" />
+</Header>
+
