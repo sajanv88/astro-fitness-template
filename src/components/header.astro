@@ -1,0 +1,64 @@
+---
+import Logo from "./logo.astro";
+interface Props {
+  headerClass?: string;
+}
+import { cn } from "../utils";
+import Link from "./link.astro";
+
+const { headerClass } = Astro.props;
+
+const navs = [
+  { text: "home", href: "/" },
+  { text: "about", href: "/about" },
+  { text: "pricing", href: "/pricing" },
+  { text: "services", href: "/services" },
+  { text: "contact", href: "/contact" },
+];
+---
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.querySelector(".js-menu-btn");
+    const nav = document.querySelector("nav");
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("hidden");
+      nav.classList.toggle("flex");
+    });
+  });
+</script>
+<header class="full-bleed relative w-full">
+  <section class={cn("grid grid-cols-12 gap-1 p-3", headerClass)}>
+    <div class="col-span-9 md:col-span-3 place-self-end">
+      <Logo />
+    </div>
+    <div class="col-span-3 place-self-end md:hidden">
+      <button
+        class="inline-flex justify-center px-3 py-3 bg-accent border-none items-center space-y-0 js-menu-btn"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <div class="col-span-12 md:col-span-9 place-self-center w-full">
+      <nav
+        class={cn(
+          "hidden p-3 md:flex flex-col items-start md:flex-row md:items-center md:justify-end",
+        )}
+      >
+        {navs.map((nav) => <Link to={nav.href}>{nav.text}</Link>)}
+      </nav>
+    </div>
+  </section>
+</header>

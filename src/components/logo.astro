@@ -1,5 +1,19 @@
 ---
 import { Image } from "astro:assets";
+interface Props {
+  width?: string;
+  height?: string;
+}
+
+const { width, height } = Astro.props;
+const w = width || "100";
+const h = height || "80";
 ---
 
-<Image src="/assets/logo.png" alt="Fitness Logo"  width="100" height="80" class="w-1/2 md:w-2/3 h-auto" />
+<Image
+  src="/assets/logo.png"
+  alt="Fitness Logo"
+  width={w}
+  height={h}
+  class="w-1/2 md:w-2/3 h-auto"
+/>

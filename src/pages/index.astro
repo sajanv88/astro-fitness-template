@@ -1,8 +1,31 @@
 ---
-
 import Layout from "../layouts/Layout.astro";
-import Navigation from "../components/navigation.astro";---
+---
 
 <Layout title="Index page">
-	<Navigation />
+  <section role="region" aria-labelledby="banner" class="full-bleed">
+    <div id="banner" class="w-full relative">
+      <div
+        class="absolute flex justify-center items-center top-[4rem] lg:top-[10rem] h-full w-full"
+      >
+        <button
+          class="text-md md:text-xl bg-accent hover:bg-accent/90 text-accent-content z-10 px-5 py-2 uppercas transition duration-300 ease-in-out"
+        >
+          Join now
+        </button>
+      </div>
+      <img
+        srcset="https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_256/home_banner_ipbudt.png 256w,
+
+        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_512/home_banner_ipbudt.png 512w,
+
+        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_768/home_banner_ipbudt.png 768w,
+
+        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_1280/home_banner_ipbudt.png 1280w"
+        src="https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_512/home_banner_ipbudt.png"
+        alt="presented by fitness.nl"
+        loading="lazy"
+      />
+    </div>
+  </section>
 </Layout>

@@ -1,0 +1,26 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "Over Ons",
+      "pricing": "Prijzen",
+      "services": "Service",
+      "contact": "Contact"
+    }
+  },
+  "footer": {
+    "openingHours": "Openingstijden",
+    "quickLinks": "Handige links",
+    "contactUs": "Contact",
+    "monday": "Maandag",
+    "tuesday": "Dinsdag",
+    "wednesday": "Woensdag",
+    "thursday": "Donderdag",
+    "friday": "Vrijdag",
+    "saturday": "Zaterdag",
+    "sunday": "Zondag",
+    "address": "Adres",
+    "phone": "Telefoon",
+    "email": "e-mail"
+  }
+}

@@ -1,24 +1,41 @@
 ---
+import Footer from "../components/footer.astro";
+import Header from "../components/header.astro";
 interface Props {
-    title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
+
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-</head>
-<body>
-<main class="max-w-screen-sm mx-auto px-3 md:px-0 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl bg-primary text-primary-content">
-    <slot />
-</main>
-</body>
+  </head>
+  <body>
+    <main class="bg-primary text-primary-content">
+      <section
+        class="max-w-screen-sm mx-auto px-3 md:px-0 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
+      >
+        <Header />
+      </section>
+
+      <section role="region" aria-labelledby="main-content">
+        <slot />
+      </section>
+      <section
+        class="max-w-screen-sm mx-auto px-3 md:px-0 md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl"
+      >
+        <Footer />
+      </section>
+    </main>
+  </body>
 </html>
+
 <style lang="css" is:global>
-    @import url('../styles/base.css');
+  @import url("../styles/base.css");
 </style>

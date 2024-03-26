@@ -1,0 +1,23 @@
+---
+import SocialLinkWithLogo from "./socialLinkWithLogo.astro";
+import OpeningHours from "./openingHours.astro";
+import QuickLinks from "./quickLinks.astro";
+import Address from "./address.astro";
+import Subscribe from "./subscribe.astro";
+---
+
+<footer class="full-bleed p-5 pt-10">
+  <div class="grid md:grid-cols-2 gap-2">
+    <SocialLinkWithLogo />
+    <Subscribe />
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 pt-10 px-5">
+    <OpeningHours />
+    <QuickLinks />
+    <Address />
+  </div>
+  <hr class="mt-10 mb-5 full-bleed-border" />
+  <p class="text-sm text-center">
+    Copyright © Fitness 2024. All rights reserved
+  </p>
+</footer>

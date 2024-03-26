@@ -1,0 +1,26 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "pricing": "Pricing",
+      "services": "Services",
+      "contact": "Contact"
+    }
+  },
+  "footer": {
+    "openingHours": "Opening hours",
+    "quickLinks": "Quick links",
+    "contactUs": "Contact us",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
+  }
+}

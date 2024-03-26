@@ -1,0 +1,9 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const prerender = false;
+const { path } = Astro.params;
+---
+
+<Layout title="Dynamic page">
+  <p>I am a {path}</p>
+</Layout>
