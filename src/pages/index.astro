@@ -4,15 +4,22 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Index page">
   <section role="region" aria-labelledby="banner" class="full-bleed">
-    <div id="banner" class="w-full relative">
+    <div id="banner" class="w-full h-full relative">
       <div
-        class="absolute flex justify-center items-center top-[4rem] lg:top-[10rem] h-full w-full"
+        class="absolute flex justify-center items-center top-[4rem] md:top-[6rem] lg:top-[10rem] h-full w-full"
       >
-        <button
-          class="text-md md:text-xl bg-accent hover:bg-accent/90 text-accent-content z-10 px-5 py-2 uppercas transition duration-300 ease-in-out"
-        >
-          Join now
-        </button>
+        <div class="space-y-2 md:space-y-4">
+          <h1
+            class="text-lg text-center md:text-3xl font-extrabold text-accent"
+          >
+            50% Off
+          </h1>
+          <button
+            class="text-md md:text-xl bg-accent hover:bg-accent/90 text-accent-content uppercase px-5 py-2 uppercas transition duration-300 ease-in-out"
+          >
+            Join now
+          </button>
+        </div>
       </div>
       <img
         srcset="https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_256/home_banner_ipbudt.png 256w,
@@ -24,8 +31,27 @@ import Layout from "../layouts/Layout.astro";
         https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_1280/home_banner_ipbudt.png 1280w"
         src="https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_512/home_banner_ipbudt.png"
         alt="presented by fitness.nl"
+        class="max-w-full h-full"
         loading="lazy"
       />
+    </div>
+  </section>
+  <section
+    role="region"
+    aria-labelledby="choose-us"
+    class="pt-24 pb-24 bg-white"
+  >
+    <div id="choose-us" class="grid grid-cols-8 place-items-center space-y-2">
+      <h2
+        class="uppercase text-xl md:text-2xl text-accent col-span-8 font-bold"
+      >
+        Why Choose Us
+      </h2>
+      <h3
+        class="uppercase text-3xl md:text-5xl font-extrabold text-primary col-span-8"
+      >
+        Build your best body
+      </h3>
     </div>
   </section>
 </Layout>
