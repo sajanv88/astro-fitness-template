@@ -11,6 +11,7 @@ export default {
         "secondary-content": "hsl(var(--secondary-content))",
         accent: "hsl(var(--accent))",
         "accent-content": "hsl(var(--accent-content))",
+        card: 'hsl(var(--secondary) / <alpha-value>)'
       },
     },
   },

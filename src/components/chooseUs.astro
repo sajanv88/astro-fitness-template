@@ -1,0 +1,77 @@
+---
+import Card from "./card.astro";
+import Link from "./link.astro";
+
+const chooseUs = [
+  {
+    title: "Flex Muscle",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "assets/svgs/flex_muscles.svg",
+    link: "#",
+  },
+  {
+    title: "Power Vitamins",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "assets/svgs/power.svg",
+    link: "#",
+  },
+  {
+    title: "Personal Trainer",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "assets/svgs/personal_trainer.svg",
+    link: "#",
+  },
+];
+---
+
+<section
+  role="region"
+  aria-labelledby="choose-us"
+  class="pt-12 md:pt-24 pb-12 md:pb-24 px-10 bg-white"
+>
+  <div
+    id="choose-us"
+    class="grid grid-cols-9 gap-2 place-items-center space-y-2"
+  >
+    <h2 class="uppercase text-xl md:text-2xl text-accent col-span-9 font-bold">
+      Why Choose Us
+    </h2>
+    <h3
+      class="uppercase text-3xl text-center md:text-5xl font-extrabold text-primary col-span-9"
+    >
+      Build your best body
+    </h3>
+  </div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 pt-8 pb-8 md:max-w-screen-xl md:mx-auto"
+  >
+    {
+      chooseUs.map((c) => (
+        <Card className="flex flex-col justify-center items-center group space-y-2">
+          <img
+            src={c.image}
+            alt={c.title}
+            width="100"
+            height="80"
+            loading="lazy"
+          />
+          <h4 class="text-xl font-bold text-secondary-content uppercase transition duration-300 ease-in group-hover:text-accent">
+            {c.title}
+          </h4>
+          <article class="text-center">
+            <p class="text-sm text-secondary-content">{c.description}</p>
+          </article>
+          <Link
+            to={c.link}
+            className="text-secondary-content hover:text-accent text-sm md:text-sm lg:text-md"
+          >
+            Read More
+          </Link>
+        </Card>
+      ))
+    }
+  </div>
+</section>

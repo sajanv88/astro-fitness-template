@@ -1,57 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ChooseUs from "../components/chooseUs.astro";
+import Banner from "../components/banner.astro";
 ---
 
 <Layout title="Index page">
-  <section role="region" aria-labelledby="banner" class="full-bleed">
-    <div id="banner" class="w-full h-full relative">
-      <div
-        class="absolute flex justify-center items-center top-[4rem] md:top-[6rem] lg:top-[10rem] h-full w-full"
-      >
-        <div class="space-y-2 md:space-y-4">
-          <h1
-            class="text-lg text-center md:text-3xl font-extrabold text-accent"
-          >
-            50% Off
-          </h1>
-          <button
-            class="text-md md:text-xl bg-accent hover:bg-accent/90 text-accent-content uppercase px-5 py-2 uppercas transition duration-300 ease-in-out"
-          >
-            Join now
-          </button>
-        </div>
+  <Banner imageName="home_banner_ipbudt.png">
+    <div
+      class="absolute flex justify-center items-center top-[4rem] md:top-[6rem] lg:top-[10rem] h-full w-full"
+    >
+      <div class="space-y-2 md:space-y-4">
+        <h1 class="text-lg text-center md:text-3xl font-extrabold text-accent">
+          50% Off
+        </h1>
+        <button
+          class="text-md md:text-xl bg-accent hover:bg-accent/90 text-accent-content uppercase px-5 py-1 md:py-2 uppercas transition duration-300 ease-in-out"
+        >
+          Join now
+        </button>
       </div>
-      <img
-        srcset="https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_256/home_banner_ipbudt.png 256w,
-
-        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_512/home_banner_ipbudt.png 512w,
-
-        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_768/home_banner_ipbudt.png 768w,
-
-        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_1280/home_banner_ipbudt.png 1280w"
-        src="https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_70,w_512/home_banner_ipbudt.png"
-        alt="presented by fitness.nl"
-        class="max-w-full h-full"
-        loading="lazy"
-      />
     </div>
-  </section>
-  <section
-    role="region"
-    aria-labelledby="choose-us"
-    class="pt-24 pb-24 bg-white"
-  >
-    <div id="choose-us" class="grid grid-cols-8 place-items-center space-y-2">
-      <h2
-        class="uppercase text-xl md:text-2xl text-accent col-span-8 font-bold"
-      >
-        Why Choose Us
-      </h2>
-      <h3
-        class="uppercase text-3xl md:text-5xl font-extrabold text-primary col-span-8"
-      >
-        Build your best body
-      </h3>
+  </Banner>
+  <ChooseUs />
+  <section role="region" aria-labelledby="about-us">
+    <div id="about-us">
+      <Banner imageName="about_us_j9odx5.png">
+        <div class="absolute flex flex-col justify-center h-full">
+          <div class="w-2/3 px-5 md:w-full md:px-10">
+            <h2
+              class="text-md md:text-2xl md:text-4xl font-extrabold text-primary"
+            >
+              About Us
+            </h2>
+            <p class="text-sm md:text-lg text-accent-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+      </Banner>
     </div>
   </section>
 </Layout>
