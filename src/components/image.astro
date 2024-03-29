@@ -1,0 +1,30 @@
+---
+import { cn } from "../utils";
+interface Props {
+  imageName: string;
+  className?: string;
+}
+const { imageName, className } = Astro.props;
+const imageSrcSet = () => {
+  return `
+        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_auto,w_256/${imageName} 256w,
+
+        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_auto,w_512/${imageName} 512w,
+
+        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_auto,w_768/${imageName} 768w,
+
+        https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_auto,w_1280/${imageName} 1280w
+    `;
+};
+const imageDefaultSrc = () => {
+  return `https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_auto,w_512/${imageName}`;
+};
+---
+
+<img
+  srcset={imageSrcSet()}
+  src={imageDefaultSrc()}
+  alt="presented by fitness.nl"
+  class={cn("max-w-full h-full", className)}
+  loading="lazy"
+/>

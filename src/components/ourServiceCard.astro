@@ -1,0 +1,36 @@
+---
+import Link from "./link.astro";
+import Image from "./image.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+const { title, description, image, link } = Astro.props;
+---
+
+<div class="min-h-36 relative overflow-hidden group">
+  <Image
+    imageName={image}
+    className="group-hover:scale-105 transition duration-300 ease-in-out"
+  />
+  <div
+    class="absolute top-0 w-full h-full bg-gradient-to-t from-gray-900 flex items-end p-5"
+  >
+    <div>
+      <h4 class="text-xl font-bold text-accent-content uppercase">
+        {title}
+      </h4>
+      <p>
+        {description}
+      </p>
+      <Link
+        href={link}
+        className="p-0 lg:p-0 text-sm lg:text-sm group-hover:text-accent-content"
+        >Read More</Link
+      >
+    </div>
+  </div>
+</div>

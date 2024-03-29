@@ -27,7 +27,15 @@ export default {
           clipPath: "inset(0 -100vmax)",
           border: "1px solid hsl(var(--secondary-content))",
           boxShadow: "0 0 0 100vmax hsl(var(--secondary-content))",
-        }
+        },
+        ".full-bleed-accent": {
+          boxShadow: "0 0 0 100vmax hsl(var(--accent))",
+          clipPath: "inset(0 -100vmax)",
+        },
+        ".full-bleed-secondary": {
+          boxShadow: "0 0 0 100vmax hsl(var(--secondary))",
+          clipPath: "inset(0 -100vmax)",
+        },
       };
       addUtilities(newUtils, ["responsive", "hover"]);
     },
