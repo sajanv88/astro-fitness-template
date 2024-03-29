@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import ChooseUs from "../components/chooseUs.astro";
 import Banner from "../components/banner.astro";
+import Numbers from "../components/numbers.astro";
+import AboutUsOVerview from "../components/aboutUsOVerview.astro";
 ---
 
 <Layout title="Index page">
@@ -22,22 +24,41 @@ import Banner from "../components/banner.astro";
     </div>
   </Banner>
   <ChooseUs />
-  <section role="region" aria-labelledby="about-us">
+  <section
+    role="region"
+    aria-labelledby="about-us"
+    class="bg-gradient-to-l from-accent/50 full-bleed"
+  >
     <div id="about-us">
-      <Banner imageName="about_us_j9odx5.png">
+      <Banner imageName="about_us_2_mew2u4.png" className="hidden md:block">
         <div class="absolute flex flex-col justify-center h-full">
-          <div class="w-2/3 px-5 md:w-full md:px-10">
-            <h2
-              class="text-md md:text-2xl md:text-4xl font-extrabold text-primary"
-            >
-              About Us
-            </h2>
-            <p class="text-sm md:text-lg text-accent-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
+          <AboutUsOVerview />
         </div>
       </Banner>
+      <div class="block md:hidden p-5">
+        <AboutUsOVerview />
+      </div>
+    </div>
+  </section>
+  <section role="region" aria-labelledby="our-service">
+    <div
+      id="our-service"
+      class="bg-gradient-to-b from-accent pt-20 h-[50rem] overflow-visible"
+    >
+      <div class="flex justify-center">
+        <div class="space-y-2 max-w-2xl">
+          <h2
+            class="uppercase text-xl text-center md:text-2xl text-accent-content font-bold"
+          >
+            Our services
+          </h2>
+          <h3
+            class="uppercase text-3xl text-center md:text-5xl font-extrabold text-primary-content"
+          >
+            Solutions for moving better & Feeling healthier
+          </h3>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>

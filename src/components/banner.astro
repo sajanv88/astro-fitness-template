@@ -1,8 +1,10 @@
 ---
+import { cn } from "../utils";
 interface Props {
   imageName: string;
+  className?: string;
 }
-const { imageName } = Astro.props;
+const { imageName, className } = Astro.props;
 const imageSrcSet = () => {
   return `
         https://res.cloudinary.com/dils4ydca/image/upload/f_auto,q_auto,w_256/${imageName} 256w,
@@ -19,7 +21,11 @@ const imageDefaultSrc = () => {
 };
 ---
 
-<section role="region" aria-labelledby="banner" class="full-bleed">
+<section
+  role="region"
+  aria-labelledby="banner"
+  class={cn("full-bleed", className)}
+>
   <div id="banner" class="w-full xl:max-h-[60rem] relative">
     <slot />
     <img
